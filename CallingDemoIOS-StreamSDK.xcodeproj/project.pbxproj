@@ -11,6 +11,10 @@
 		46EE7B522C992EC60077ABAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EE7B512C992EC60077ABAB /* ContentView.swift */; };
 		46EE7B542C992EC70077ABAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46EE7B532C992EC70077ABAB /* Assets.xcassets */; };
 		46EE7B572C992EC70077ABAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46EE7B562C992EC70077ABAB /* Preview Assets.xcassets */; };
+		46EE7B5F2C992F840077ABAB /* StreamVideo in Frameworks */ = {isa = PBXBuildFile; productRef = 46EE7B5E2C992F840077ABAB /* StreamVideo */; };
+		46EE7B612C992F840077ABAB /* StreamVideoSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 46EE7B602C992F840077ABAB /* StreamVideoSwiftUI */; };
+		46EE7B632C9937A00077ABAB /* ParticipantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EE7B622C9937A00077ABAB /* ParticipantsView.swift */; };
+		46EE7B652C9937D50077ABAB /* FloatingParticipantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EE7B642C9937D50077ABAB /* FloatingParticipantView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,8 @@
 		46EE7B512C992EC60077ABAB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		46EE7B532C992EC70077ABAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46EE7B562C992EC70077ABAB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		46EE7B622C9937A00077ABAB /* ParticipantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsView.swift; sourceTree = "<group>"; };
+		46EE7B642C9937D50077ABAB /* FloatingParticipantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingParticipantView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +32,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46EE7B612C992F840077ABAB /* StreamVideoSwiftUI in Frameworks */,
+				46EE7B5F2C992F840077ABAB /* StreamVideo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +60,8 @@
 			isa = PBXGroup;
 			children = (
 				46EE7B4F2C992EC60077ABAB /* CallingDemoIOS_StreamSDKApp.swift */,
+				46EE7B622C9937A00077ABAB /* ParticipantsView.swift */,
+				46EE7B642C9937D50077ABAB /* FloatingParticipantView.swift */,
 				46EE7B512C992EC60077ABAB /* ContentView.swift */,
 				46EE7B532C992EC70077ABAB /* Assets.xcassets */,
 				46EE7B552C992EC70077ABAB /* Preview Content */,
@@ -83,6 +93,10 @@
 			dependencies = (
 			);
 			name = "CallingDemoIOS-StreamSDK";
+			packageProductDependencies = (
+				46EE7B5E2C992F840077ABAB /* StreamVideo */,
+				46EE7B602C992F840077ABAB /* StreamVideoSwiftUI */,
+			);
 			productName = "CallingDemoIOS-StreamSDK";
 			productReference = 46EE7B4C2C992EC60077ABAB /* CallingDemoIOS-StreamSDK.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 46EE7B432C992EC60077ABAB;
+			packageReferences = (
+				46EE7B5D2C992F840077ABAB /* XCRemoteSwiftPackageReference "stream-video-swift" */,
+			);
 			productRefGroup = 46EE7B4D2C992EC60077ABAB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +156,8 @@
 			files = (
 				46EE7B522C992EC60077ABAB /* ContentView.swift in Sources */,
 				46EE7B502C992EC60077ABAB /* CallingDemoIOS_StreamSDKApp.swift in Sources */,
+				46EE7B652C9937D50077ABAB /* FloatingParticipantView.swift in Sources */,
+				46EE7B632C9937A00077ABAB /* ParticipantsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,8 +291,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CallingDemoIOS-StreamSDK/Preview Content\"";
+				DEVELOPMENT_TEAM = 8SBSSA37JJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "$(MARKETING_VERSION)";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -300,8 +322,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CallingDemoIOS-StreamSDK/Preview Content\"";
+				DEVELOPMENT_TEAM = 8SBSSA37JJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "$(MARKETING_VERSION)";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -342,6 +367,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		46EE7B5D2C992F840077ABAB /* XCRemoteSwiftPackageReference "stream-video-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GetStream/stream-video-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		46EE7B5E2C992F840077ABAB /* StreamVideo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 46EE7B5D2C992F840077ABAB /* XCRemoteSwiftPackageReference "stream-video-swift" */;
+			productName = StreamVideo;
+		};
+		46EE7B602C992F840077ABAB /* StreamVideoSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 46EE7B5D2C992F840077ABAB /* XCRemoteSwiftPackageReference "stream-video-swift" */;
+			productName = StreamVideoSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 46EE7B442C992EC60077ABAB /* Project object */;
 }
